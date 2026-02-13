@@ -74,7 +74,7 @@ Bank-Management-System/
 
 🖥️ How to Run
 1️⃣ Clone the repository
-git clone https://github.com/your-username/Bank-Management-System.git
+git clone https://github.com/LokeshManickam/Bank-Management-System
 
 2️⃣ Open in any IDE (IntelliJ / Eclipse / VS Code)
 3️⃣ Compile and Run:
