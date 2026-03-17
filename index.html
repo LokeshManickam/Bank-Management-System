@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bank Management System Demo</title>
+
+<style>
+
+body{
+background:#111;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:monospace;
+}
+
+.terminal{
+background:black;
+color:#00ff88;
+padding:25px;
+width:650px;
+border-radius:8px;
+box-shadow:0 0 15px #00ff88;
+}
+
+input{
+background:none;
+border:none;
+color:#00ff88;
+font-family:monospace;
+outline:none;
+width:90%;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="terminal">
+
+<div id="output"></div>
+
+<div>
+<span>$ </span>
+<input id="input" autofocus>
+</div>
+
+</div>
+
+<script>
+
+const output = document.getElementById("output")
+const input = document.getElementById("input")
+
+function menu(){
+
+output.innerHTML += `
+====== BANK MANAGEMENT SYSTEM ======<br>
+1. Create Account<br>
+2. Deposit Money<br>
+3. Withdraw Money<br>
+4. Check Balance<br>
+5. View Transaction History<br>
+6. Exit<br>
+Enter choice:<br><br>
+`
+
+}
+
+menu()
+
+input.addEventListener("keydown",function(e){
+
+if(e.key==="Enter"){
+
+let cmd=input.value
+
+output.innerHTML += "$ "+cmd+"<br>"
+
+if(cmd==="1"){
+output.innerHTML+="Account created successfully!<br>"
+}
+
+else if(cmd==="2"){
+output.innerHTML+="Deposit successful!<br>"
+}
+
+else if(cmd==="3"){
+output.innerHTML+="Withdrawal successful!<br>"
+}
+
+else if(cmd==="4"){
+output.innerHTML+="Current Balance: ₹5000<br>"
+}
+
+else if(cmd==="5"){
+output.innerHTML+=`
+--- Transaction History ---<br>
+Account created with ₹5000<br>
+Deposited ₹2000<br>
+Withdrawn ₹1000<br>
+`
+}
+
+else if(cmd==="6"){
+output.innerHTML+="System exited.<br>"
+}
+
+else{
+output.innerHTML+="Invalid choice.<br>"
+}
+
+menu()
+
+input.value=""
+
+}
+
+})
+
+</script>
+
+</body>
+</html>

@@ -86,6 +86,7 @@ public class BankManagementSystem {
         } catch (NumberFormatException e) {
             System.out.println("Invalid deposit amount.");
         }
+        scanner.close();
     }
 
     private static BankAccount authenticate() {
@@ -130,6 +131,7 @@ public class BankManagementSystem {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        scanner.close();
     }
 
     private static void withdrawMoney() {
@@ -181,4 +183,5 @@ public class BankManagementSystem {
         System.out.println("Thank you for using our system.");
         System.exit(0);
     }
+
 }
